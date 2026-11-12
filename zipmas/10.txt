@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int secret = 7;
+    int guess;
+    int found = 0;
+
+    for (int i = 1; i <= 5; i++) {
+        scanf("%d", &guess);
+        
+        if (guess == secret) {
+            printf("Tabriklaymiz, topdingiz!\n");
+            found = 1;
+            break;
+        } else {
+            printf("Noto'g'ri, qayta urinib ko'ring\n");
+        }
+    }
+
+    if (!found) {
+        printf("Maxfiy son: %d\n", secret);
+    }
+
+    return 0;
+}
